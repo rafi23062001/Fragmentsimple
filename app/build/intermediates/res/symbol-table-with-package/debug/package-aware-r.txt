@@ -607,6 +607,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable beatles_anthology_box
+drawable bisa
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -675,8 +676,8 @@ id end_padder
 id expand_activities_button
 id expanded_menu
 id forever
+id fragment_container
 id fragment_one
-id fragmentku
 id home
 id homeAsUp
 id icon
@@ -700,6 +701,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id open_btn
 id packed
 id parent
 id parentPanel
