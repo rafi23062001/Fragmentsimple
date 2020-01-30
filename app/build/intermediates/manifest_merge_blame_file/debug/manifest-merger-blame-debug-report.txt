@@ -41,27 +41,30 @@
 33        android:testOnly="true"
 34        android:theme="@style/AppTheme" >
 34-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:27:9-40
-35        <activity android:name="com.example.android.fragmentexample.MainActivity" >
+35        <activity
 35-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:28:9-34:20
-35-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:28:19-47
-36            <intent-filter>
-36-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:29:13-33:29
-37                <action android:name="android.intent.action.MAIN" />
-37-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:30:17-69
-37-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:30:25-66
-38
-39                <category android:name="android.intent.category.LAUNCHER" />
-39-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:32:17-77
-39-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:32:27-74
-40            </intent-filter>
-41        </activity>
-42
-43        <meta-data
-43-->[com.android.support:appcompat-v7:26.0.1] C:\Users\GEEKSFARM\.gradle\caches\transforms-2\files-2.1\cfe60aab5c3667a307af72a8cfc5c1ed\appcompat-v7-26.0.1\AndroidManifest.xml:26:9-28:38
-44            android:name="android.support.VERSION"
-44-->[com.android.support:appcompat-v7:26.0.1] C:\Users\GEEKSFARM\.gradle\caches\transforms-2\files-2.1\cfe60aab5c3667a307af72a8cfc5c1ed\appcompat-v7-26.0.1\AndroidManifest.xml:27:13-51
-45            android:value="26.0.1" />
-45-->[com.android.support:appcompat-v7:26.0.1] C:\Users\GEEKSFARM\.gradle\caches\transforms-2\files-2.1\cfe60aab5c3667a307af72a8cfc5c1ed\appcompat-v7-26.0.1\AndroidManifest.xml:28:13-35
-46    </application>
-47
-48</manifest>
+36            android:name="com.example.android.fragmentexample.MainActivity"
+36-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:28:19-47
+37            android:parentActivityName="com.example.android.fragmentexample.MainActivity" >
+37-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:28:48-90
+38            <intent-filter>
+38-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:29:13-33:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:30:17-69
+39-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:30:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:32:17-77
+41-->D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:32:27-74
+42            </intent-filter>
+43        </activity>
+44
+45        <meta-data
+45-->[com.android.support:appcompat-v7:26.0.1] C:\Users\GEEKSFARM\.gradle\caches\transforms-2\files-2.1\cfe60aab5c3667a307af72a8cfc5c1ed\appcompat-v7-26.0.1\AndroidManifest.xml:26:9-28:38
+46            android:name="android.support.VERSION"
+46-->[com.android.support:appcompat-v7:26.0.1] C:\Users\GEEKSFARM\.gradle\caches\transforms-2\files-2.1\cfe60aab5c3667a307af72a8cfc5c1ed\appcompat-v7-26.0.1\AndroidManifest.xml:27:13-51
+47            android:value="26.0.1" />
+47-->[com.android.support:appcompat-v7:26.0.1] C:\Users\GEEKSFARM\.gradle\caches\transforms-2\files-2.1\cfe60aab5c3667a307af72a8cfc5c1ed\appcompat-v7-26.0.1\AndroidManifest.xml:28:13-35
+48    </application>
+49
+50</manifest>

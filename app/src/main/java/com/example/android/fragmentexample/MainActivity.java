@@ -23,10 +23,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SimpleFragmentOne.OnCheckradioButtonlistener{
 
     private Button mButton;
     private boolean isFragmentDisplayed = false;
+    private int pilihanku = 2;
 
     static final String STATE_FRAGMENT ="state_of_fragment";
 
@@ -54,9 +55,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
     }
     public void displayFragment(){
-        SimpleFragmentOne simpleFragmentOne=SimpleFragmentOne.newInstance();
+        SimpleFragmentOne simpleFragmentOne=SimpleFragmentOne.newInstance(pilihanku);
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.fragment_container,simpleFragmentOne).addToBackStack(null).commit();
@@ -77,5 +79,10 @@ public class MainActivity extends AppCompatActivity {
     public void onSaveInstanceState(Bundle savedInstanceState){
         savedInstanceState.putBoolean(STATE_FRAGMENT, isFragmentDisplayed);
         super.onSaveInstanceState(savedInstanceState);
+    }
+
+    @Override
+    public void onCheck(int pilihan) {
+        this.pilihanku=pilihan;
     }
 }

@@ -32,7 +32,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.android.fragmentexample.MainActivity" >
+        <activity
+            android:name="com.example.android.fragmentexample.MainActivity"
+            android:parentActivityName="com.example.android.fragmentexample.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

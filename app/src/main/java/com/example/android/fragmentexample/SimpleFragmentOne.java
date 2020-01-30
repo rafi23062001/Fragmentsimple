@@ -1,24 +1,31 @@
 package com.example.android.fragmentexample;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
-import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class SimpleFragmentOne extends Fragment {
-
+    private static RadioGroup radioGroup;
     private static final int YES = 0;
     private static final int NO = 1;
+    private static final int NONE =2;
+
+    private int btnTerpilih=0;
+    OnCheckradioButtonlistener listener;
 
     public SimpleFragmentOne() {
         // Required empty public constructor
+    }
+
+    public interface OnCheckradioButtonlistener{
+        void onCheck(int pilihan);
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -27,7 +34,7 @@ public class SimpleFragmentOne extends Fragment {
         // Inflate the layout for this fragment.
         final View rootView = inflater.inflate(R.layout.fragment_simple_fragment_one,
                 container, false);
-        final RadioGroup radioGroup = rootView.findViewById(R.id.radio_group);
+        radioGroup = rootView.findViewById(R.id.radio_group);
 
         radioGroup.setOnCheckedChangeListener(
                 new RadioGroup.OnCheckedChangeListener() {
@@ -47,12 +54,48 @@ public class SimpleFragmentOne extends Fragment {
                             default:
                                 break;
                         }
+                        listener.onCheck(index);
                     }
                 });
+
+        if (getArguments().containsKey("pilihanku")){
+            btnTerpilih = getArguments().getInt("pilihanku");
+            if (btnTerpilih!=NONE){
+                radioGroup.check(radioGroup.getChildAt(btnTerpilih).getId());
+            }
+        }
         return rootView;
     }
 
-    public static SimpleFragmentOne newInstance() {
-        return new SimpleFragmentOne();
+    public static SimpleFragmentOne newInstance(int pilihanku) {
+        SimpleFragmentOne simpleFragmentOne = new SimpleFragmentOne();
+
+        Bundle arguments = new Bundle();
+        arguments.putInt("pilihanku",pilihanku);
+
+        simpleFragmentOne.setArguments(arguments);
+        return simpleFragmentOne;
+    }
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnCheckradioButtonlistener){
+            listener=(OnCheckradioButtonlistener) context;
+        }
+        else {
+            throw new ClassCastException(context.toString()+ "harus mengimplementasikan OncheckradioButton listener");
+        }
+    }
+
+    public static void Checkradiokuya(){
+        radioGroup.check(radioGroup.getChildAt(0).getId());
+    }
+    public static void CheckradiokuNo(){
+        radioGroup.check(radioGroup.getChildAt(1).getId());
+    }
+    public static void CheckradiokuNone(){
+        radioGroup.check(radioGroup.getChildAt(2).getId());
     }
 }

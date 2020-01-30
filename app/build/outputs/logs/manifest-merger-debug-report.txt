@@ -67,6 +67,8 @@ MERGED from [com.android.support:support-compat:26.0.1] C:\Users\GEEKSFARM\.grad
 		ADDED from D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:27:9-40
 activity#com.example.android.fragmentexample.MainActivity
 ADDED from D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:28:9-34:20
+	android:parentActivityName
+		ADDED from D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:28:48-90
 	android:name
 		ADDED from D:\Training\Fragmentsimple\app\src\main\AndroidManifest.xml:28:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
